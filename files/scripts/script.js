@@ -1,4 +1,5 @@
 const domain = "https://vaisselle-vrn.github.io/";
+const path = domain + "files/blocks/";
 
 function setFlags() {
     const countries = document.getElementsByClassName("card-country");
@@ -42,7 +43,6 @@ function forIE() {
     document.createElement("footer");
 }
 
-const path = domain + "files/blocks/";
 loadFile(path, "head.html", () => loadFile(path, "skeleton.html"));
 window.onload = function() {
     forIE();
