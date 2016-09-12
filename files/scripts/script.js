@@ -1,4 +1,4 @@
-const domain = "https://vaisselle-vrn.github.io";
+const domain = "https://vaisselle-vrn.github.io/";
 
 function setFlags() {
     const countries = document.getElementsByClassName("card-country");
