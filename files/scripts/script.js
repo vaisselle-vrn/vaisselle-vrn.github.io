@@ -19,7 +19,7 @@ function loadFile(path, file, callback = () => {}) {
     else {
         xhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
-    xhttp.open("POST", path + file, true);
+    xhttp.open("GET", path + file, true);
     xhttp.send();
     xhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
