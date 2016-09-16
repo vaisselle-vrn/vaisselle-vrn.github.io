@@ -1,9 +1,9 @@
 const domain = "https://vaisselle-vrn.github.io/";
-const path = domain + "files/blocks/";
+var path = domain + "files/blocks/";
 
 function setFlags() {
     const countries = document.getElementsByClassName("card-country");
-    for (let i = 0; i != countries.length; i++) {
+    for (var i = 0; i != countries.length; i++) {
         const country = countries[i];
         const name = country.dataset.country.toLowerCase();
         const flag = domain + "files/img/flags/" + name + ".png";
@@ -11,8 +11,8 @@ function setFlags() {
     }
 }
 
-function loadFile(path, file, callback = () => {}) {
-    let xhttp;
+function loadFile(path, file, callback) {
+    var xhttp;
     if (window.XMLHttpRequest) {
         xhttp = new XMLHttpRequest();        
     }
@@ -43,7 +43,10 @@ function forIE() {
     document.createElement("footer");
 }
 
-loadFile(path, "head.html", () => loadFile(path, "skeleton.html"));
+loadFile(path, "head.html", function() {
+    loadFile(path, "skeleton.html", function() {})
+});
+
 window.onload = function() {
     forIE();
     setFlags();
