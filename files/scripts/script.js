@@ -2,11 +2,11 @@ var domain = "https://vaisselle-vrn.github.io/";
 var path = domain + "files/blocks/";
 
 function setFlags() {
-    const countries = document.getElementsByClassName("card-country");
+    var countries = document.getElementsByClassName("card-country");
     for (var i = 0; i != countries.length; i++) {
-        const country = countries[i];
-        const name = country.dataset.country.toLowerCase();
-        const flag = domain + "files/img/flags/" + name + ".png";
+        var country = countries[i];
+        var name = country.dataset.country.toLowerCase();
+        var flag = domain + "files/img/flags/" + name + ".png";
         countries[i].style.backgroundImage = "url(" + flag + ")";
     }
 }
