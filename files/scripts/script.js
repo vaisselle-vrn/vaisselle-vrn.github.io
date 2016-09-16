@@ -1,4 +1,4 @@
-const domain = "https://vaisselle-vrn.github.io/";
+const domain = "http://vaisselle-vrn.github.io/";
 const path = domain + "files/blocks/";
 
 function setFlags() {
